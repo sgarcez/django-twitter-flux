@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+
+    <meta charset="utf-8">
+    <title>Twitter-Pool Demo</title>
+
+</head>
+<body>
+	
+
+    <div>
+        
+        <h2>Home Feed (3 tweets per user)</h2>
+        <ul>
+        {% for tweet in homefeed %}
+        <li>{{ tweet|urlize }}</li>
+        {% endfor %}
+        </ul>
+
+        <h2>Home Feed (3 tweets per user | Interlaced)</h2>
+        <ul>
+        {% for tweet in homefeedinterlaced %}
+        <li>{{ tweet|urlize }}</li>
+        {% endfor %}
+        </ul>
+
+        <h2>Other Feed (5 tweets per user)</h2>
+        <ul>
+        {% for tweet in otherfeed %}
+        <li>{{ tweet|urlize }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>

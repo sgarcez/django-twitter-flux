@@ -1,0 +1,6 @@
+*.py[co]
+
+.DS_Store
+
+example/env
+database
