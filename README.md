@@ -26,7 +26,7 @@ A small Django app to persist a pool of the last X number of tweets from a set o
 
     * Optionally also add `TWITTER_BUFFER_SIZE` specifying the maximum number of tweets to keep from each account at any time (default is `5`).
     * `syncdb`
-    * Add some twitter accounts in your Admin
+    * Add some twitter accounts in your Admin, you will be able to assign them to multiple `feeds`.
     * Run the management command on a cron tab: `./manage.py retrieve_tweets [-v 2]`
     * In your views use `get_tweets` from the `twitterflux.utils` module to get list of tweets for a specific Feed, or all tweets.
     * Requires `python-twitter`
