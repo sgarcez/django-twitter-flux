@@ -3,6 +3,14 @@ from .settings import TWITTER_BUFFER_SIZE, TWITTER_FEEDS
 
 
 def get_tweets(category=None, per_user=1, interlaced=False):
+    """returns list of tweets
+
+    :param category: string used to fetch int from TWITTER_FEEDS
+    :param per_user: number of tweets per user
+    :param interlaced: wether the tweets should be returned
+    interlaced(1 per account in sequence) or chronologically(default.
+    :returns: list
+    """
     per_user = min(per_user, TWITTER_BUFFER_SIZE)
 
     if category:
