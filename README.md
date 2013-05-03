@@ -8,14 +8,14 @@ A small Django app to persist the last X number of tweets from a set of twitter 
     * requires python-twitter
 	* Install dependencies with `pip install -r requirements.txt`
 	* Add `twitterflux` to your INSTALLED_APPS
-	* Create a [Twitter App](https://dev.twitter.com/) and add the credential to your settings file:
+	* Create a [Twitter App](https://dev.twitter.com/) and add the credentials to your settings file:
 	
 			TWITTER_CONSUMER_KEY = "XX"
 			TWITTER_CONSUMER_SECRET = "XX"
 			TWITTER_ACCESS_KEY = "XX"
 			TWITTER_ACCESS_SECRET = "XX"
 
-    * Add a a choices tuple of feeds where the first element is an `int`:
+    * Add a `TWITTER_FEEDS` choices tuple of feeds where the first element is an `int`:
     		
     		MAIN_FEED = 'Main'
 			OTHER_FEED = 'Other'
