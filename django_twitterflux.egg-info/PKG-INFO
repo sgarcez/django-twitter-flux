@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: django-twitterflux
+Version: 0.0.1
+Summary: Retrieval and storage of recent tweets in Django.
+Home-page: https://github.com/sgarcez/django-twitter-flux/
+Author: sergio Garcez
+Author-email: garcez.sergio@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
