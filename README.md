@@ -1,7 +1,7 @@
 Django Twitter Flux
 =============
 
-A small Django app to persist a pool of the last X number of tweets from a set of twitter accounts. These accounts can be mapped to configurable `feeds` which are basically aggregators so you can have a timelines with multiple users and manage associations via the Admin.
+A small Django app to persist a pool of the last X number of tweets from a set of twitter accounts. These accounts can be mapped to configurable `feeds` which are basically aggregators so you can have timelines with multiple users and manage associations via the Admin.
 
 
 * Setup:
