@@ -34,4 +34,4 @@ def get_tweets(category=None, per_user=1, interlaced=False):
                     pass
         return tweets
     else:
-        return Tweet.objects.filter(user_id__in=users)
+        return list(Tweet.objects.filter(user_id__in=users))
