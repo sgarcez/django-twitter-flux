@@ -1,0 +1,12 @@
+language: python
+python:
+  - 2.7
+install:
+  - pip install Django>=1.4 python-twitter>=0.8.7 factory_boy coveralls
+  - python example/manage.py syncdb --noinput
+  - rm -f .coveralls.yml
+  - echo repo_token: PTsBLBQZpR0TkQW2aRjcJR9xw6us2NWo5 >> .coveralls.yml
+script:
+  - coverage run --source=twitterflux runtests.py
+after_success:
+  - coveralls
