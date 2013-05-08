@@ -4,7 +4,7 @@ Django Twitter Flux
 [![Build Status](https://travis-ci.org/sgarcez/django-twitter-flux.png)](https://travis-ci.org/sgarcez/django-twitter-flux) [![Coverage Status](https://coveralls.io/repos/sgarcez/django-twitter-flux/badge.png?branch=master)](https://coveralls.io/r/sgarcez/django-twitter-flux)
 
 
-A small Django app to persist a pool of the last X number of tweets from a set of twitter accounts. These accounts can be mapped to configurable `feeds` which are basically aggregators so you can have timelines with multiple users and manage associations via the Admin.
+A small Django app to persist a pool of the last X number of tweets from a set of twitter accounts. These accounts can be mapped to configurable `feeds` which are basically aggregators so you can have timelines with multiple users and manage associations in the Admin.
 
 
 * Setup:
@@ -28,7 +28,7 @@ A small Django app to persist a pool of the last X number of tweets from a set o
 			)
 
     * Optionally also add `TWITTER_BUFFER_SIZE` specifying the maximum number of tweets to keep from each account at any time (default is `5`).
-    * `syncdb`
+    * Run `syncdb`
     * Add some twitter accounts in your Admin, you will be able to assign them to multiple `feeds`.
     * Run the management command on a cron tab: `./manage.py retrieve_tweets [-v 2]`
     * In your views use `get_tweets` from the `twitterflux.utils` module to get list of tweets for a specific Feed, or all tweets.
