@@ -9,8 +9,12 @@ setup(
     url="https://github.com/sgarcez/django-twitter-flux/",
     include_package_data=True,
     zip_safe=False,
+    license='BSD',
+    test_suite="runtests.runtests",
     install_requires=[
         "python-twitter >= 0.8.7",
+        "django >= 1.3",
+        "factory_boy == 1.3.0"
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',

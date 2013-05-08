@@ -1,7 +1,9 @@
 import sys
 from django.conf import settings
 
-settings.configure(DEBUG=True,
+
+def runtests():
+    settings.configure(DEBUG=True,
                DATABASES={
                     'default': {
                         'ENGINE': 'django.db.backends.sqlite3',
@@ -17,9 +19,13 @@ settings.configure(DEBUG=True,
                 TWITTER_ACCESS_KEY = "XX",
                 TWITTER_ACCESS_SECRET = "XX",
                 TWITTER_FEEDS = ())
+                
+    from django.test.utils import get_runner
 
-from django.test.simple import DjangoTestSuiteRunner
-test_runner = DjangoTestSuiteRunner(verbosity=1)
-failures = test_runner.run_tests(['twitterflux', ])
-if failures:
-    sys.exit(failures)
+    TestRunner = get_runner(settings)
+    test_runner = TestRunner(verbosity=1, interactive=True)
+    failures = test_runner.run_tests(['twitterflux'])
+    sys.exit(bool(failures))
+
+if __name__ == '__main__':
+    runtests()
